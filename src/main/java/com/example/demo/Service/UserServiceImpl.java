@@ -17,4 +17,27 @@ public class UserServiceImpl implements UserService{
 		return userMapper.selectAllUser();
 	}
 
+	@Override
+	public void insert(UserModel userModel) {
+		userMapper.insert(userModel);
+		
+	}
+
+	@Override
+	public void delete(int id) {
+		userMapper.delete(id);
+	}
+
+	@Override
+	public void singleInsert(int id ,String name,String hobby) {
+		userMapper.singleInsert(id ,name ,hobby);
+		
+	}
+
+	@Override
+	public void update(int id, String name) {
+		userMapper.update(id, name);
+		
+	}
+
 }

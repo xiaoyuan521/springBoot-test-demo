@@ -9,4 +9,13 @@ import com.example.demo.Model.UserModel;
 @Mapper
 public interface UserMapper {
 	public List<UserModel> selectAllUser();
+	
+	public void insert(UserModel userModel);
+	
+	public void singleInsert(int id,String name,String hobby);
+	
+	public void delete(int id);
+	
+	public void update(int id,String name);
+	
 }

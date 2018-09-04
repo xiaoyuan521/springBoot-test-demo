@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 文件可以删除 没有用到 -->
 <configuration>
 	<properties resource="application.properties"></properties>
 	<environments default="development">
