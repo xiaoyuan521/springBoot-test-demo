@@ -17,6 +17,11 @@ public class ExampleController {
 
 	@RequestMapping(value = "/")
 	public String theFirstPrj() {
+		return "redirect:/login";
+	}
+
+	@RequestMapping(value = "/login")
+	public String login() {
 		return "login";
 	}
 
@@ -24,7 +29,7 @@ public class ExampleController {
 	public String loginError() {
 		return "loginError";
 	}
-	
+
 	@RequestMapping(value = "/welcome")
 	public String welcome() {
 		return "welcome";
@@ -39,8 +44,8 @@ public class ExampleController {
 		return userList;
 	}
 
-	@RequestMapping(value = "/login")
-	public String login(UserModel userModel) {
+	@RequestMapping(value = "/loginInit")
+	public String loginInit(UserModel userModel) {
 
 		String username = userModel.getUsername();
 		String password = userModel.getPassword();
