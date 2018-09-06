@@ -24,10 +24,15 @@ public class ExampleController {
 	public String loginError() {
 		return "loginError";
 	}
-
+	
 	@RequestMapping(value = "/welcome")
+	public String welcome() {
+		return "welcome";
+	}
+
+	@RequestMapping(value = "/menu")
 	@ResponseBody
-	public List<UserModel> success() {
+	public List<UserModel> menu() {
 
 		List<UserModel> userList = userService.findAllUser();
 

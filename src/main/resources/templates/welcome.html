@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理登录</title>
+<script type="text/javascript" src="../js/jQuery.js"></script>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/login.js"></script>
+<script type="text/javascript">
+$(function() {
+$.ajax({
+    type: "POST",
+    url: "/menu",
+    data: {},
+    success: function(data){
+    	
+    	var table='<table id="listTable"><tr><th>username</th><th>password</th></tr>';
+    	
+    	$.each(data,function(i,item){
+    		
+    		table=	table + '<tr><td>'+item.username+'</td><td>'+item.password+'</td></tr>';
+    	　　});
+    	table +"</table>";
+    	$("#ajaxDiv").html(table);
+       }
+ });
+});
+
+</script>
+</head>
+<body>
+	<h1>AJAX</h1>
+	<div id="ajaxDiv"></div>
+</body>
+</html>
