@@ -10,6 +10,8 @@ import com.example.demo.Model.UserModel;
 public interface UserMapper {
 	public List<UserModel> selectAllUser();
 	
+	public List<UserModel> selectUserByUserAndPwd(String username, String password);
+	
 	public void insert(UserModel userModel);
 	
 	public void singleInsert(int id,String username,String password);

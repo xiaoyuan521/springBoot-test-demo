@@ -40,4 +40,9 @@ public class UserServiceImpl implements UserService{
 		
 	}
 
+	@Override
+	public List<UserModel> findUserByUserAndPwd(String username, String password) {
+		return userMapper.selectUserByUserAndPwd(username, password);
+	}
+
 }

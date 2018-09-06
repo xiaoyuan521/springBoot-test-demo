@@ -7,6 +7,8 @@ import com.example.demo.Model.UserModel;
 public interface UserService {
 
 	List<UserModel> findAllUser();
+	
+	List<UserModel> findUserByUserAndPwd(String username,String password);
 
 	void insert(UserModel userModel);
 	

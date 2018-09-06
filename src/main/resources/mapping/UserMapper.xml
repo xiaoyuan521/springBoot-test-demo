@@ -5,6 +5,12 @@
 		resultType="com.example.demo.Model.UserModel">
 		select * from user
 	</select>
+	
+	<select id="selectUserByUserAndPwd"
+		resultType="com.example.demo.Model.UserModel">
+		select * from user WHERE username = #{username} and password = #{password} 
+	</select>
+	
 	<insert id="insert"
 		parameterType="com.example.demo.Model.UserModel">
 		insert into user(username,password)

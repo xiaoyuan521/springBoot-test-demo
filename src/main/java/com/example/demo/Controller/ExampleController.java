@@ -17,16 +17,34 @@ public class ExampleController {
 
 	@RequestMapping(value = "/")
 	public String theFirstPrj() {
-		return "index";
+		return "login";
 	}
 
-	@RequestMapping(value = "/login")
+	@RequestMapping(value = "/loginError")
+	public String loginError() {
+		return "loginError";
+	}
+
+	@RequestMapping(value = "/welcome")
 	@ResponseBody
-	public List<UserModel> login(UserModel userModel) {
+	public List<UserModel> success() {
 
 		List<UserModel> userList = userService.findAllUser();
 
 		return userList;
+	}
+
+	@RequestMapping(value = "/login")
+	public String login(UserModel userModel) {
+
+		String username = userModel.getUsername();
+		String password = userModel.getPassword();
+		List<UserModel> loginList = userService.findUserByUserAndPwd(username, password);
+		if (loginList.size() == 0) {
+			return "redirect:/loginError";
+		}
+
+		return "redirect:/welcome";
 	}
 
 	@RequestMapping(value = "/regist")
