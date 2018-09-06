@@ -22,7 +22,7 @@ public class ExampleController {
 
 	@RequestMapping(value = "/login")
 	@ResponseBody
-	public List<UserModel> login() {
+	public List<UserModel> login(UserModel userModel) {
 
 		List<UserModel> userList = userService.findAllUser();
 
@@ -33,11 +33,11 @@ public class ExampleController {
 	@ResponseBody
 	public List<UserModel> regist() {
 
-		String name = "aaa" + System.currentTimeMillis();
-		String hobby = "ball" + System.currentTimeMillis();
+		String username = "aaa" + System.currentTimeMillis();
+		String password = "ball" + System.currentTimeMillis();
 		UserModel userModel = new UserModel();
-		userModel.setName(name);
-		userModel.setHobby(hobby);
+		userModel.setUsername(username);
+		userModel.setPassword(password);
 		userService.insert(userModel);
 		List<UserModel> userList = userService.findAllUser();
 
@@ -50,9 +50,9 @@ public class ExampleController {
 
 		List<UserModel> userList = userService.findAllUser();
 		int id = 10;
-		String name = "aaa" + System.currentTimeMillis();
-		String hobby = "ball" + System.currentTimeMillis();
-		userService.singleInsert(id, name, hobby);
+		String username = "aaa" + System.currentTimeMillis();
+		String password = "ball" + System.currentTimeMillis();
+		userService.singleInsert(id, username, password);
 		userService.delete(id);
 		return userList;
 	}
@@ -63,8 +63,8 @@ public class ExampleController {
 
 		List<UserModel> userList = userService.findAllUser();
 		int id = 1;
-		String name = "hhhh" + System.currentTimeMillis();
-		userService.update(id, name);
+		String username = "hhh" + System.currentTimeMillis();
+		userService.update(id, username);
 		return userList;
 	}
 

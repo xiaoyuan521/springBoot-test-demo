@@ -29,14 +29,14 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public void singleInsert(int id ,String name,String hobby) {
-		userMapper.singleInsert(id ,name ,hobby);
+	public void singleInsert(int id ,String username,String password) {
+		userMapper.singleInsert(id ,username ,password);
 		
 	}
 
 	@Override
-	public void update(int id, String name) {
-		userMapper.update(id, name);
+	public void update(int id, String username) {
+		userMapper.update(id, username);
 		
 	}
 

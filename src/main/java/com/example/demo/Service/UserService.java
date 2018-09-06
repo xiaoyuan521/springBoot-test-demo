@@ -10,10 +10,10 @@ public interface UserService {
 
 	void insert(UserModel userModel);
 	
-	void singleInsert(int id ,String name,String hobby);
+	void singleInsert(int id ,String username,String password);
 
 	void delete(int id);
 	
-	void update(int id,String name);
+	void update(int id,String username);
 
 }

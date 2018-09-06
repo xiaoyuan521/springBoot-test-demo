@@ -7,14 +7,14 @@
 	</select>
 	<insert id="insert"
 		parameterType="com.example.demo.Model.UserModel">
-		insert into user(name,hobby)
-		values(#{name}, #{hobby})
+		insert into user(username,password)
+		values(#{username}, #{password})
 	</insert>
 
 <insert id="singleInsert"
 		parameterType="com.example.demo.Model.UserModel">
-		insert into user(id,name,hobby)
-		values(#{id},#{name}, #{hobby})
+		insert into user(id,username,password)
+		values(#{id},#{username}, #{password})
 	</insert>
 
 	<delete id="delete"
@@ -24,7 +24,7 @@
 	
 	<update id ="update" parameterType="com.example.demo.Model.UserModel">
 	UPDATE user  
-            SET name= #{name}
+            SET username= #{username}
          WHERE id = #{id};     
 	
 	</update>

@@ -12,10 +12,10 @@ public interface UserMapper {
 	
 	public void insert(UserModel userModel);
 	
-	public void singleInsert(int id,String name,String hobby);
+	public void singleInsert(int id,String username,String password);
 	
 	public void delete(int id);
 	
-	public void update(int id,String name);
+	public void update(int id,String username);
 	
 }
