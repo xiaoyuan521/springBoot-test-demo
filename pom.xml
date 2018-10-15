@@ -59,20 +59,27 @@
 			<version>1.3.0</version>
 		</dependency>
 
-		<!-- <dependency> -->
-		<!-- <groupId>mysql</groupId> -->
-		<!-- <artifactId>mysql-connector-java</artifactId> -->
-		<!-- </dependency> -->
+<!-- 		<dependency> -->
+<!-- 		<groupId>mysql</groupId> -->
+<!-- 		<artifactId>mysql-connector-java</artifactId> -->
+<!-- 		</dependency> -->
 
 		<!-- mysql8 连接方式不一样 需要引入8的包 -->
 		<!-- 解决maven本地包和需求包不一致情况 解决方案如下 -->
 		<!-- mvn install:install-file -Dfile=mysql-connector-java-8.0.11.jar -DgroupId=mysql 
 			-DartifactId=com.my.mysql -Dversion=8.0.11 -Dpackaging=jar -->
 
+<!-- 		<dependency> -->
+<!-- 			<groupId>mysql</groupId> -->
+<!-- 			<artifactId>com.my.mysql</artifactId> -->
+<!-- 			<version>8.0.11</version> -->
+<!-- 		</dependency> -->
+
+		<!--不知道为啥这种方式又好使了 -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>com.my.mysql</artifactId>
-			<version>8.0.11</version>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.11</version>
 		</dependency>
 
 		<dependency>
